@@ -6,11 +6,28 @@
 /*   By: aoukhart <aoukhart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 02:48:52 by aoukhart          #+#    #+#             */
-/*   Updated: 2022/06/09 00:16:09 by aoukhart         ###   ########.fr       */
+/*   Updated: 2022/06/26 21:29:25 by aoukhart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	void	*str;
+	size_t	i;
+
+	i = 0;
+	str = malloc(count * size);
+	if (!str)
+		return (NULL);
+	while (i < count * size)
+	{
+		*(unsigned char *)(str + i) = 0;
+		i++;
+	}
+	return (str);
+}
 
 void	push_all_a(t_list **stacka, t_list **stackb, int i, int ac)
 {
@@ -34,13 +51,18 @@ void	is_num(const char *s)
 	int	i;
 
 	i = 0;
+	if (s[i] == '\0')
+	{
+		write(2, "Error.\n", 8);
+		exit(0);
+	}
 	while (s[i])
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 			i++;
 		else
 		{
-			write(1, "Error.\n", 8);
+			write(2, "Error.\n", 8);
 			exit(0);
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: aoukhart <aoukhart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 01:50:40 by aoukhart          #+#    #+#             */
-/*   Updated: 2022/06/09 00:24:22 by aoukhart         ###   ########.fr       */
+/*   Updated: 2022/06/26 21:26:36 by aoukhart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	*check_sorted_duplic(int *tab, int ac, int i)
 		{
 			if (tab[i] == tab[j])
 			{
-				write(2, "Error.\n", 18);
+				write(2, "Error.\n", 8);
 				free(tab);
 				exit(0);
 			}

@@ -6,7 +6,7 @@
 /*   By: aoukhart <aoukhart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 22:45:48 by aoukhart          #+#    #+#             */
-/*   Updated: 2022/06/26 01:25:02 by aoukhart         ###   ########.fr       */
+/*   Updated: 2022/06/27 02:04:05 by aoukhart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,5 @@ void	sort_10(t_list **stacka, t_list **stackb, int ac)
 		t++;
 	}
 	sort_3(stacka);
-	push_a_n_time(stacka);
+	push_a_n_time(stacka, stackb, t);
 }
